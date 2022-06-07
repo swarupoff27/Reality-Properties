@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 1px solid red; */
 }
 
 html,
@@ -19,11 +18,10 @@ body {
     margin: 0 auto;
     padding: 0;
     /* outline: 2px solid red; */
-
 }
 
 .rb {
-    outline: 2px solid red;
+    border: 2px solid red;
 }
 
 .bb {
@@ -78,10 +76,6 @@ header a {
     color: white;
 }
 
-.classabc:before{
-    content: "\f0ec";
-}
-
 header .float__right img{
     filter:  brightness(0) invert(1);
     width:19px;
@@ -108,7 +102,6 @@ footer figure img{
 
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/background.png');
-    background-color: black;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     object-fit: contain;
@@ -116,7 +109,6 @@ footer figure img{
     margin: 0 auto;
     height: 100vh;
     min-height: 600px;
-    margin: 0 auto;
     position: relative;
 }
 
@@ -135,7 +127,6 @@ footer figure img{
     color: white;
 }
 
-
 .hero__text p:nth-child(2){
     color: white;
     font-weight: bold;
@@ -149,17 +140,52 @@ form {
     border-radius: 10px;
     overflow: hidden;
     margin-top: 40px;
+    height: 50px;
+    width:635px;
+}
+
+.chev{
+    height: 100%;
+    width: 150px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chev span{
+    font-size: 14px;
+    position: relative;
+    left:20px;
+    color: #454545;
+}
+
+.chevimg{
+    position: relative;
+    top:10px;
+    left:54px;
+    right:0;
+    padding: 12px 10px;  
+} 
+
+.search{
+    height: 100%;
+    font-size: 16px;
+    padding: 6px 7px;
+    position: relative;
+    left: 20px;
+    border: none;
+    background: white;
+    color: #2e46e3;
+    cursor: pointer;
 }
 
 input {
     color: #454545;
     font-size: 15px;
     line-height: 26px;
-    letter-spacing: 0.5px;
+    letter-spacing: calc(1px / 2);
     border: none;
-    padding:0 20px 0 10px;
-    width: 425px;
-    height: 50px;
+    width: 405px;
+    position: relative;
+    left: 25px;
 }
 
 input::placeholder {
@@ -169,48 +195,10 @@ input::placeholder {
 
 }
 
-input:focus::placeholder {
-    color: transparent;
-}
 
 input:focus {
     outline: none !important;
 }
-
-.search {
-    float: left;
-    background: white;
-    color: #2e46e3;
-    border: none;
-    border-left: none;
-    cursor: pointer;
-    margin: 10px 0 10px 20px;
-    font-size: 16px;
-    padding: 6px 7px;
-}
-
-
-.chev {
-    height: 50px;
-    background-color: white;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.chev p{
-    font-size: 14px;
-    /* line-height:50px; */
-    display: inline-block;
-    color: #454545;
-    margin: 15.5px 0 15.5px 20px;
-}
-
-.chevimg{
-    position: relative;
-    top:10px;
-    padding: 12px 10px;
-    margin-left: 34px;
-}
-
 
 /* hero *************************************************************************************/
 
@@ -218,14 +206,14 @@ input:focus {
 /* featured properties********************************************************************** */
 
 .featured {
-    margin-top: 96px;
+    padding-top: 96px;
     text-align: center;
 }
 
 .featured h2 {
     color: #000000;
     font-size: 32px;
-    letter-spacing: -1;
+    letter-spacing: -1px;
     font-weight: bold;
     text-align: left;
 }
@@ -264,21 +252,21 @@ article {
 
 .featured div p:nth-child(1) {
     font-size: 18px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     color: #454545;
 }
 
 .featured div p:nth-child(2) {
     font-size: 18px;
     font-weight: bold;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-top: 4px;
     color: #004dff;
 }
 
 .featured div p:nth-child(3) {
     font-size: 14px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-top: 4px;
     color: #454545;
 
@@ -291,25 +279,25 @@ article {
 .details span {
     font-size: 14px;
     color: #454545;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-right: 18px;
 }
 
-.details .abc1 {
+.details .bed {
     width: 30px;
     height: 30px;
-    padding: 6.5px 6.5px 6.5px 0;
+    padding: calc(12px / 2) calc(12px / 2) calc(12px / 2) 0;
     vertical-align: middle;
 }
 
-.details .abc2 {
+.details .bath {
     width: 30px;
     height: 30px;
     vertical-align: middle;
 
 }
 
-.details .abc3 {
+.details .sqft {
     width: 30px;
     height: 30px;
     padding: 7px;
@@ -320,7 +308,7 @@ article {
     font-size: 14px;
     font-weight: 600;
     line-height: 50px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-top: 30px;
     width: 150px;
     border: none;
@@ -340,14 +328,13 @@ article {
 
 
 .two__cards {
-    margin-top: 100px;
+    padding: 100px 0;
 }
 
 .left__card,
 .right__card {
     width: calc((100% - 30px) / 2);
     height: 350px;
-    /* border: 1px solid red; */
     padding: 50px;
     border-radius: 5px;
     background-color: #f6f7f9;
@@ -364,7 +351,7 @@ article {
 
 .left__card p {
     font-size: 18px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-top: 19px;
     color: #454545;
 }
@@ -379,15 +366,15 @@ article {
 
 .right__card p {
     font-size: 16px;
-    letter-spacing: 0;
-    margin-top: 19px;
+    letter-spacing: 0px;
+    margin-top: 14px;
     color: white;
 }
 
 .contact__us {
     font-size: 14px;
     line-height: 50px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     width: 134px;
     margin-top: 26px;
     border-radius: 25px;
@@ -409,7 +396,6 @@ article {
     width: 100%;
     height: 700px;
     margin: 0 auto;
-    margin-top: 100px;
 }
 
 .advertise__content {
@@ -423,7 +409,6 @@ article {
     padding: 50px;
     width: 540px;
     border-radius: 5px;
-    clear: right;
 }
 
 .advertise__card h2 {
@@ -438,7 +423,6 @@ article {
     text-align: center;
     width: 87px;
     background-color: #ff9f00;
-    display: inline-block;
     color: white;
     border-radius: 5px;
 }
@@ -447,13 +431,13 @@ article {
     font-size: 24px;
     font-weight: bold;
     margin-top: 8px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     color: #004dff;
 }
 
 .advertise__card p:nth-child(4) {
     font-size: 18px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-top: 9px;
     color: #454545;
 
@@ -476,14 +460,14 @@ article {
     border-radius: 35%;
     width: 50px;
     height: 50px;
-    margin-right: 20px;
-
 }
 
 .name {
     font-size: 18px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     color: #454545;
+    position: relative;
+    left:20px;
 }
 
 .designation {
@@ -515,7 +499,7 @@ article {
 
 .slide {
     text-align: center;
-    margin-top: 100px;
+    padding: 100px 0;
 }
 
 .slide h2 {
@@ -593,7 +577,7 @@ svg {
     font-weight: bold;
     line-height: 27px;
     color: #454545;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-top: 37px;
 }
 
@@ -603,7 +587,7 @@ svg {
     font-weight: bold;
     line-height: 27px;
     color: #454545;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-top: 47px;
 }
 
@@ -613,7 +597,7 @@ svg {
     font-size: 16px;
     line-height: 27px;
     color: #454545;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-top: 9px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -626,7 +610,7 @@ svg {
     font-size: 18px;
     line-height: 27px;
     color: #454545;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     margin-top: 18px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -653,6 +637,11 @@ svg {
     box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.09);
 }
 
+/* .left__article:hover,
+.right__article:hover{
+    position: relative;
+    z-index: 5;
+} */
 
 /* slide *******************************************************************************/
 
@@ -663,9 +652,7 @@ svg {
 footer {
     text-align: center;
     padding: 50px 0;
-    background-color: #f6f7f9;
-    margin-top: 100px;
-
+    background-color: #f6f7f9; 
 }
 
 footer p {
